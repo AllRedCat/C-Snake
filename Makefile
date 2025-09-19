@@ -1,2 +1,2 @@
 default:
-	gcc main.c -o snake | clear
+	gcc -fopenmp -lm main.c -o snake | clear

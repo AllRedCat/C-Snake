@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
+#include <omp.h>
+#include <maph.h>
 
 #define WIDTH 60
 #define HEIGHT 26
@@ -9,6 +12,11 @@
 // ┌─┐
 // │.│
 // └─┘
+
+// Global buffer
+char screen_buffer[HEIGHT][WIDTH + 3];
+
+// Function to render the frame
 
 int main() {
   // Hide cursor
